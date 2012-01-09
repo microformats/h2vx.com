@@ -1,0 +1,14 @@
+Options +MultiViews
+DefaultType text/html
+ErrorDocument 404 /ics/get-cal.php
+RewriteEngine On 
+RewriteBase /ics/
+RewriteCond %{HTTP_USER_AGENT} CCBot [OR] 
+RewriteCond %{HTTP_USER_AGENT} Googlebot [OR] 
+RewriteCond %{HTTP_USER_AGENT} Searchbot [OR] 
+RewriteCond %{HTTP_USER_AGENT} seexie.com_bot [OR] 
+RewriteCond %{HTTP_USER_AGENT} Slurp [OR] 
+RewriteCond %{HTTP_USER_AGENT} Yandex [OR] #2009-309 retrieved robots.txt but ignored it
+RewriteCond %{HTTP_USER_AGENT} DataAccess [OR] #2010-010 appears to hang get-cal.php
+RewriteCond %{HTTP_USER_AGENT} aboutWebSearch 
+RewriteRule .* - [F,L]

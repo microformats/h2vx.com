@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>H2VX: hCalendar to iCalendar</title>
+<style type="text/css">
+@import "../modern.css?v2009-303";
+</style>
+<script type="text/javascript" src="../cassis.js"></script>
+</head>
+<body>
+<h1><a href="../" rel="index">H2VX</a></h1>
+<h2>Events Conversion Service</h2>
+<p>
+Download or subscribe to <i class="term">hCalendar <a class="info" href="http://microformats.org/wiki/hcalendar"><b>(</b>What is hCalendar?<b>)</b></a></i> events
+</p>
+<form method="get" action="get-cal.php">
+<p><label>Web address:
+<input type="text" name="uri" id="uri" value="http://microformats.org/wiki/events" /></label>
+<input type="submit" value="Download" />
+<input id="subscribe" name="subscribe" type="submit" value="Subscribe" /> 
+</p>
+<script type="text/javascript" src="sharing.js"></script>
+</form>
+
+<div class="favelet" id="browser-buttons">
+<h2>Convert events from your browser toolbar</h2>
+<p>
+Drag this link:
+<a id="copyhcalendar" class="favelet" title="Download hCalendar events from the current page to your calendar program." href="javascript:void(location.href='http://h2vx.com/ics/'+escape(location.href))">Get hCalendar</a>
+to your browser's <i class="term">links toolbar <span class="info"><b>(</b>sometimes called a "Bookmarks Toolbar"<b>)</b></span></i> and download hCalendar events from webpages you're viewing by clicking it in your toolbar.
+</p>
+<p>And drag this link: 
+<a id="subhcalendar" class="favelet" title="Subscribe to hCalendar events from the current page in your calendar program." href="javascript:void(location.href='webcal://h2vx.com/ics/'+escape(location.href))">Subscribe to hCalendar</a>
+to your links toolbar and one-click subscribe to hCalendar events from webpages  to your calendar program.
+</p>
+</div>
+
+<div class="footer">
+<p>The <strong>H2VX</strong> events service converts web pages with hCalendar <i class="term">microformats <a class="info" href="http://microformats.org/about"><b>(</b>What are microformats?<b>)</b></a></i> for events to iCalendar (ics format) for convenient import into your calendar program. See the 
+<a href="http://microformats.org/wiki/hcalendar">hCalendar specification</a> for more information.</p>
+<p>Follow <a href="http://twitter.com/h2vx">@h2vx</a> for status updates. Give <a href="http://microformats.org/wiki/h2vx">H2VX feedback</a>. 
+</p>
+<p class="about">
+Powered by <a href="http://microformats.org/wiki/x2v">X2V</a> by 
+<span class="vcard"><a class="fn url" href="http://suda.co.uk/">Brian Suda</a></span>. <a href="http://tantek.pbworks.com/CassisProject">CASSIS</a> and site design by <span class="vcard"><a class="fn url" href="http://tantek.com">Tantek Çelik</a></span>, inspired by <a href="http://asin.cc/B000VWEFP8">Helvetica</a>.
+</p>
+</div>
+</body>
+</html>

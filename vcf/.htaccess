@@ -1,0 +1,13 @@
+Options +MultiViews
+DefaultType text/html
+ErrorDocument 404 /vcf/get-contact.php
+RewriteEngine On 
+RewriteBase /vcf/
+RewriteCond %{HTTP_USER_AGENT} CCBot [OR] 
+RewriteCond %{HTTP_USER_AGENT} Googlebot [OR] 
+RewriteCond %{HTTP_USER_AGENT} Searchbot [OR] 
+RewriteCond %{HTTP_USER_AGENT} seexie.com_bot [OR] 
+RewriteCond %{HTTP_USER_AGENT} Slurp [OR] 
+RewriteCond %{HTTP_USER_AGENT} Yandex [OR] #2009-309 retrieved robots.txt but ignored it
+RewriteCond %{HTTP_USER_AGENT} aboutWebSearch 
+RewriteRule .* - [F,L]

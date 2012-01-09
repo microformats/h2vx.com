@@ -1,0 +1,90 @@
+/* modern.css */
+/* (CC) 2009 Tantek Celik. Some Rights Reserved.                  */
+/*   http://creativecommons.org/licenses/by/2.0                   */
+/* This style sheet is licensed under a Creative Commons License. */
+/* Inspired by a viewing of Helvetica:  http://tr.im/hlvtca       */
+
+@import "undohtml.css";
+
+body {
+  font-family: Helvetica Neue, Helvetica, Geneva, sans-serif;
+  line-height: 2em;
+  padding:2em;
+  margin:auto;
+  max-width: 25em;
+}
+
+h1 { 
+  font-size:4em; 
+  line-height:1.2em;
+  margin-left:-.06em;
+} 
+
+body, h1 :link, h1 :visited {
+  color:#000;
+  background:#fff;
+}
+h1 :link:hover, h1 :visited:hover, a.favelet:hover {
+ text-decoration:none;
+}
+
+body, input { 
+  font-size:24px; 
+}
+
+
+.term { position:relative; padding-bottom:.5em }
+.term .info { visibility:hidden; position:absolute; top:.8em; left:0; font-size:10px; white-space:nowrap; font-style:normal; font-weight:bold }
+.term .info b { display:none }
+.term:hover .info,.term:focus .info { visibility:visible }
+
+div.favelet { margin-top: 2em; }
+.favelet p { font-size:.667em; line-height:2em }
+
+.footer { margin-top:4em; font-size:.667em; line-height:2em }
+.footer p { margin:1em 0; }
+
+a.favelet:link,a.favelet:visited {
+  font-size:smaller; 
+  color:#000;
+  background-color:#CCC;
+  padding:.2em 2em;
+  border-radius:1em; -moz-border-radius:1em; -webkit-border-radius:1em; 
+  border: 1px solid #CCC;
+  cursor:default
+}
+
+.about { font-size:smaller }
+
+:link, :visited {color:#666; font-weight:bold}
+:link:hover,:visited:hover {text-decoration:underline}
+
+fieldset { 
+  font-size:.5em; 
+  line-height:2.7em; 
+  padding:1em 0.5em; 
+  margin-top:1.4em;
+}
+fieldset input { font-size:1em }
+fieldset label { float:left; width:4em; text-align:right; padding-right:.5em }
+fieldset label.term { padding-bottom:0 }
+fieldset .term .info { margin:.6em 0 0 5.5em; font-weight:normal }
+fieldset p { clear:both }
+
+input {
+  font-family: Helvetica Neue Light, Helvetica Neue, Helvetica, Geneva, sans-serif;
+}
+
+input[type=submit] { width: 6em }
+input[type=text] { width: 16em }
+fieldset { width: 30em }
+fieldset input[type=text] { width: 24em }
+
+@media screen and (min-device-width: 640px) {
+  input[type=text] { width: 24.8em }
+  fieldset input[type=text] { width: 42em }
+  fieldset { width:100%; padding:1em;  }
+  fieldset label {float:left; width:4.6em; text-align:right; padding-right:.5em}
+  fieldset .term .info { margin:.6em 0 0 6.2em }
+}
+

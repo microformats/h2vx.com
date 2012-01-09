@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>H2VX: hCards to vCards</title>
+<style type="text/css">
+@import "../modern.css";
+</style>
+<script type="text/javascript" src="../cassis.js"></script>
+</head>
+<body>
+<h1><a href="../" rel="index">H2VX</a></h1>
+<h2>Contacts Conversion Service</h2>
+<p>
+Download <i class="term">hCard <a class="info" href="http://microformats.org/wiki/hcard"><b>(</b>What is hCard?<b>)</b></a></i> contacts to your address book
+</p>
+<form method="post" action="get-contact.php">
+<p>
+<label>Web address:
+<input type="text" name="uri" id="uri" value="http://tantek.com" /></label>
+<input type="submit" value="Download" /> 
+</p>
+<script type="text/javascript" src="sharing.js"></script>
+</form>
+
+<div class="favelet" id="browser-button">
+<h2>Convert contacts from your browser toolbar</h2>
+<p>
+Drag this link: 
+<a id="copyhcards" class="favelet" title="Download hCards from the current page to your address book." href="javascript:void(location.href='http://h2vx.com/vcf/'+escape(location.href))">Get hCards</a> 
+to your browser's <i class="term">links toolbar <span class="info"><b>(</b>sometimes called a "Bookmarks Toolbar"<b>)</b></span></i> and then download hCards directly from webpages you're viewing by clicking it in your toolbar.
+</p>
+</div>
+
+<div class="footer">
+<p>The <strong>H2VX</strong> contacts service converts web pages with hCard <i class="term">microformats <a class="info" href="http://microformats.org/about"><b>(</b>What are microformats?<b>)</b></a></i> for people, organizations, and venues to vCards (vcf format) for convenient import into address book, email, or other contact management applications. See the 
+<a href="http://microformats.org/wiki/hcard">hCard specification</a> for more information. 
+</p>
+<p>Follow <a href="http://twitter.com/h2vx">@h2vx</a> for status updates. Give <a href="http://microformats.org/wiki/h2vx">H2VX feedback</a>. 
+</p>
+<p class="about">
+Powered by <a href="http://microformats.org/wiki/x2v">X2V</a> by 
+<span class="vcard"><a class="fn url" href="http://suda.co.uk/">Brian Suda</a></span>. <a href="http://tantek.pbworks.com/CassisProject">CASSIS</a> and site design by <span class="vcard"><a class="fn url" href="http://tantek.com">Tantek Çelik</a></span>, inspired by <a href="http://asin.cc/B000VWEFP8">Helvetica</a>.
+</p>
+</div>
+</body>
+</html>
