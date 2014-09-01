@@ -1,6 +1,7 @@
 Options +MultiViews
-DefaultType text/html
+#DefaultType text/html #commented due to LiteSpeed bug
 ErrorDocument 404 /ics/get-cal.php
+# block bad bots that ignore robots.txt
 RewriteEngine On 
 RewriteBase /ics/
 RewriteCond %{HTTP_USER_AGENT} CCBot [OR] 

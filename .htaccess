@@ -1,7 +1,14 @@
 Options +Indexes
-DefaultType text/html
+#DefaultType text/html #commented due to LiteSpeed bug
 AddType 'text/plain; charset=UTF-8' .txt
 AddType 'text/html; charset=UTF-8' .html
 AddType 'text/css; charset=UTF-8' .css
 AddType 'text/javascript; charset=UTF-8' .js
 AddType 'application/atom+xml' .atom
+DirectoryIndex index.php index.html
+# no-www
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+Deny from 66.197.197.245
