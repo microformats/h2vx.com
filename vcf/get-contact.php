@@ -111,7 +111,7 @@ if ((substr($uri, 0,7) == "http://") || (substr($uri, 0,8) == "https://")) {
     if ($logfile == '') {
       // if empty or unspecified, get it from one fn or domain
       // look for the fullname so we can name the vcf
-      preg_match_all( '/FN.*?:(.*)/i', $Str, &$matches);
+      preg_match_all( '/FN.*?:(.*)/i', $Str, $matches);
       // get the matched line and all matches for our requested parameter
       // if we get more than 1 name we've got a group of hCards 
       // so name the file after the domain.

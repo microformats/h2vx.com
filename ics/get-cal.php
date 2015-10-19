@@ -138,7 +138,7 @@ if ((substr($uri, 0,7) == "http://") || (substr($uri, 0,8) == "https://")) {
     if ($logfile == '') {
       // if empty or unspecified, get it from one summary or domain
       // look for the summary so we can name the ics file
-      preg_match_all( '/SUMMARY.*?:(.*)/i', $Str, &$matches);
+      preg_match_all( '/SUMMARY.*?:(.*)/i', $Str, $matches);
       // get the matched line and all matches for our requested parameter
       // if we get more than 1 summary we've got a group of hCalendar events
       // so name the file after the domain.
