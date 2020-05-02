@@ -55,7 +55,7 @@ function geturiparam($pathdelimiter, $addhttp) {
          'wrap'            => 200,
          'hide-comments'   => TRUE,
          'new-blocklevel-tags' => implode(' ', array(
-           'header', 'footer', 'article', 'section', 'aside', 'nav', 'hgroup', 'figure',
+           'header', 'footer', 'main', 'article', 'section', 'aside', 'nav', 'hgroup', 'figure',
          )),
          'new-inline-tags' => implode(' ', array(
            'mark', 'time', 'meter', 'progress',
