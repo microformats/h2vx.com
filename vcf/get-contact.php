@@ -22,7 +22,7 @@ if (!$dev || $public_beta) {
 }
 
 
-include '../common.php';
+require_once '../common.php';
 
 
 $uri = geturiparam('/vcf/', true);

@@ -2,6 +2,7 @@
 /* common.php
 
 2009-10-26 created by Tantek Çelik http://tantek.com
+2024-06-11 removed cassis.js dependency
 
 NOTES:
 This depends on code from CASSIS V0 by Tantek Celik http://tantek.com
@@ -10,9 +11,7 @@ http://creativecommons.org/licenses/by-sa/3.0/
 
 --------------------------------------------------------------------- */
 
-ob_start();
-include 'cassis.js';
-ob_end_clean();
+require_once __DIR__ . '/cassis.php';
 
 /* php only functions */
 
@@ -41,7 +40,7 @@ function geturiparam($pathdelimiter, $addhttp) {
   * Run tidy on the given string if it is installed.
   *
   * @param string $html the html to run through tidy.
-  * @return the tidied html or false if tidy is not installed.
+  * @return string the tidied html or false if tidy is not installed.
   * @author Matt Harris
   */
  function html5_tidy($html) {
@@ -75,5 +74,3 @@ function geturiparam($pathdelimiter, $addhttp) {
  }
 
 /* end php only functions */
-
-?>
